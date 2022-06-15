@@ -8,7 +8,7 @@ pipeline {
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ninjaajith/Jenkinspipe.git']]])
             }
         }
-         stage('Stage 2') {
+         stage('Build docker image') {
             steps {
                 echo 'Hello Mercury'
             }
