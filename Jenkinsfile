@@ -19,11 +19,17 @@ pipeline {
               
             }
         }
-         stage('Stage 3') {
-            steps {
-                echo 'Hello Venus'
+         stage('Push docker image') {
+            steps { 
+                script { 
+                    docker.withRegistry( '', registryCredential ) { 
+                        dockerImage.push("latest")
+                        dockerImage.push("${env.BUILD_ID}")
+                    }
+                } 
             }
-        }
+        } 
+        
         stage('Stage 4') {
             steps {
                 echo 'Hello Earth'
