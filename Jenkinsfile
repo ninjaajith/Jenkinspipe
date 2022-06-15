@@ -32,7 +32,7 @@ pipeline {
             }
            stage("Deploy to kubernete"){
              steps {
-                 sshagent(['34963f0b-2117-4b20-84f8-df4cbae1baa3']) {
+                 sshagent(['jenkins_agent_key']) {
                 // some block
                    }
                 }
