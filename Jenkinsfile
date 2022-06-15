@@ -1,5 +1,9 @@
 
 pipeline {
+    
+    environment {
+    dockerimage=''
+    }
     agent any
 
     stages {
