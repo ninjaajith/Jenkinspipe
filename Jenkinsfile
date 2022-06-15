@@ -10,7 +10,8 @@ pipeline {
         }
          stage('Build docker image') {
             steps {
-                echo 'Hello Mercury'
+                   dockerimage = docker.build ninjaajith/godocker + ":$BUILD_NUMBER"
+              
             }
         }
          stage('Stage 3') {
