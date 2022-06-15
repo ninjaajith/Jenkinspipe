@@ -31,18 +31,4 @@ pipeline {
                 } 
             }
         } 
-        
-        stage('Stage 4') {
-            steps {
-                echo 'Hello Earth'
-            }
-        }
-        stage('Stage 5') {
-            steps {
-                echo 'Hello Moon'
-            }
-        }
-        
     }
-
-
