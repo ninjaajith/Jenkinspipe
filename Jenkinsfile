@@ -16,7 +16,8 @@ pipeline {
             steps {
                 script{
                    dockerimage = docker.build "ninjaajith/godocker" + ":$BUILD_NUMBER"
-                
+                }
+                {
                     // Create our project directory.
                     sh 'cd ${GOPATH}/src'
                     sh 'mkdir -p ${GOPATH}/src/hello-world'
