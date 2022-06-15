@@ -1,4 +1,3 @@
-
 pipeline {
     
     environment {
@@ -14,7 +13,9 @@ pipeline {
         }
          stage('Build docker image') {
             steps {
+                script{
                    dockerimage = docker.build "ninjaajith/godocker" + ":$BUILD_NUMBER"
+                }
               
             }
         }
