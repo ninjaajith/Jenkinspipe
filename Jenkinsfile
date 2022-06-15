@@ -14,7 +14,7 @@ pipeline {
         }
          stage('Build docker image') {
             steps {
-                   dockerimage = docker.build ninjaajith/godocker + ":$BUILD_NUMBER"
+                   dockerimage = docker.build "ninjaajith/godocker" + ":$BUILD_NUMBER"
               
             }
         }
