@@ -33,7 +33,7 @@ pipeline {
             }
            stage("Deploy to kubernete"){
              steps {
-                 sh 'Kubectl apply -f deploy.yaml'
+                 bat 'Kubectl apply -f deploy.yaml'
                
                    }
                 }
