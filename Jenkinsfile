@@ -2,6 +2,7 @@ pipeline {
     
     environment {
     dockerimage = ''
+    registry = "ninjaajith/godocker"
     registryCredential='dockerhub_Ajith'
     }
     agent any
@@ -32,9 +33,8 @@ pipeline {
             }
            stage("Deploy to kubernete"){
              steps {
-                sshagent(['sshKubernete']) {
-               // some block
-                  }
+                 sh 'Kubectl apply -f deploy.yaml'
+               
                    }
                 }
             }
