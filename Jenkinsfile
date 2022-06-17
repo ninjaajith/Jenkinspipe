@@ -32,10 +32,9 @@ pipeline {
                 } 
             }
            stage("Deploy to kubernete"){
-             steps {
-                 bat 'Kubectl apply -f deploy.yaml'
-               
-                   }
+              sshagent(['sshKubernete']) {
+               // some block
+                } 
                 }
             }
         } 
