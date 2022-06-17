@@ -32,9 +32,11 @@ pipeline {
                 } 
             }
            stage("Deploy to kubernete"){
+                steps { 
               sshagent(['sshKubernete']) {
                // some block
                 } 
+                }
                 }
             }
         } 
