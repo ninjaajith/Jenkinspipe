@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ninjaajith/godocker
-        image: 5d2f696990bf
+        image: ninjaajith/godocker:23
         resources:
           limits:
             memory: "128Mi"
